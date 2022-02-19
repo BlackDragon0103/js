@@ -1,0 +1,13 @@
+.lesson{
+    margin: 15px 0;
+}
+
+.wrapper_block{
+    width: 500px;
+    height: 500px;
+    border: 1px solid red;
+}
+
+.block{
+    background-color: black;
+}
