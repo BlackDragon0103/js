@@ -61,6 +61,7 @@ let isBlock = false
 let blockTop = 0;
 let blockLevo = 0;
 let size;
+let circ=0
 
 let btnDown = document.querySelector('.down')
 let btnUp = document.querySelector('.up')
@@ -77,19 +78,23 @@ btnLeft.addEventListener('click',blockLeft)
 btnRight.addEventListener('click',blockRight)
 btnAdd.addEventListener('click',addBlock)
 btnChange.addEventListener('change',changeCol)
-btnCirc.addEventListener('click',btnCircle)
-
-function btnCircle(){
-    let circ=0
-    let block = document.querySelector('.block')
     if(circ==0){
-        block.style.borderRadius = 100+'%'
+        btnCirc.addEventListener('click',btnCircle)
         circ=1
     }
     if(circ==1){
-        block.style.borderRadius = 0+'%'
+        btnCirc.addEventListener('click',btnNonCircle)
         circ=0        
     }
+
+function btnCircle(){
+    let block = document.querySelector('.block')
+    block.style.borderRadius = 100+'%'
+}
+
+function btnNonCircle(){
+    let block = document.querySelector('.block')
+    block.style.borderRadius = 0
 }
 
 function blockRemove(){
